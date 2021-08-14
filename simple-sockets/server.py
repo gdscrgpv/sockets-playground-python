@@ -24,6 +24,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         while True:
 
             # Receives data from the client
+            # 1024 means max data, it doesn’t mean that recv() will return 1024 bytes.
             data = conn.recv(1024)
             if not data:
                 break
